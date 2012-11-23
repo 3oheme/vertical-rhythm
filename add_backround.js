@@ -12,3 +12,4 @@
   context.fillRect(0, 0, p_line_height, 1);
 
   $('body').css('background', 'url("'+ canvas.toDataURL() +'")');
+
