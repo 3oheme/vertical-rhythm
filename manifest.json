@@ -1,9 +1,13 @@
 {
-  "name": "Vertical Rhythm",
+  "name": "Vertical Rhythm Ruler",
   "version": "1.0",
-  "manifest_version": 2,
-  "description": "Vertical Rhythm plugin",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
   "browser_action": {
-    "default_icon": "icon.png"
-  }
+      "default_title": "Set a vertical ruler.",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
 }
