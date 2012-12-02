@@ -16,11 +16,19 @@ function click(e) {
   context.fillRect(0, 0, p_line_height, 1);
   var image = canvas.toDataURL()
 
+
   chrome.tabs.executeScript(null,
       {code:"document.body.style.backgroundImage='url("+ canvas.toDataURL()  +")';"});
-  window.close();
+  //window.close();
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#apply').addEventListener('click', click);
+});
+
+chrome.extension.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    document.getElementById('spacing').value = 88;
+   // document.getElementById('spacing').value = request.size;
 });

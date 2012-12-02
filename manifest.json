@@ -1,9 +1,16 @@
 {
   "name": "Vertical Rhythm Ruler",
   "version": "1.0",
+  "icons": {
+    "32": "icon128.png"
+  },
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
+  "content_scripts": [{
+    "matches": ["http://*/*"],
+    "js": ["page.js"]
+  }],
   "browser_action": {
       "default_title": "Set a vertical ruler.",
       "default_icon": "icon.png",
