@@ -10,6 +10,8 @@ function click(e) {
   var context = canvas.getContext("2d");
   context.fillStyle = "rgba(0, 0, 0, .1)";
   context.fillRect(0, 0, p_line_height, 1);
+  context.fillStyle = "rgba(255, 0, 0, .1)";
+  context.fillRect(0, p_line_height/2, p_line_height, 1);
   var image = canvas.toDataURL()
 
   chrome.tabs.executeScript(null,
