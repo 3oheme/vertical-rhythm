@@ -2,21 +2,17 @@
 <html>
   <head>
     <title>Set page ruler</title>
-    <style>
-    body {
-      overflow: hidden;
-      margin: 0px;
-      padding: 0px;
-      background: white;
-    }
-
-   </style>
     <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <label for="spacing">Vertical rhythm ruler:</label>
-    <input type="text" id="spacing" value="25.6" />
-    <input type="button" id="apply" value="Apply"/>
-    <canvas style="display: none" width="10px" height="100px" id="bgcanvas" ></canvas>
+    <div class="vr-wrapper">
+      <label class="label" for="spacing">Spacing</label>
+      <input class="input" type="text" id="spacing" value="25" />
+      <label class="label" for="offset">Offset</label>
+      <input class="input" type="text" id="offset" value="0" />
+      <input class="apply" type="button" id="apply" value="Apply changes"/>
+      <canvas style="display: none" width="10px" height="100px" id="bgcanvas" ></canvas>
+    </div>
   </body>
 </html>
