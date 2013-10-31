@@ -10,14 +10,14 @@ body {
 
 .vr-wrapper {
 	width: 119px;
-	padding: 20px;
+	padding: 10px;
 	overflow: hidden;
 }
 
 .label {
 	width: 70px;
 	float: left;
-	padding: 3px 0;
+	padding: 5px 0;
 }
 
 .input {
@@ -33,14 +33,13 @@ body {
 	border: 1px solid #999;
 	padding: 5px 10px;
 	border-radius: 3px;
-	float: right;
 	clear: both;
 	background: white;
 	font-size: 12px;
 }
 
 .apply:hover {
-	background: #E7FFE7;
+	border-color: #000;
 	cursor: pointer;
 }
 

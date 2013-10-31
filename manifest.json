@@ -5,7 +5,7 @@
     "32": "icon128.png"
   },
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs", "http://*/*", "https://*/*", "storage"
   ],
   "content_scripts": [{
     "matches": ["http://*/*"],
