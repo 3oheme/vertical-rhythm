@@ -16,7 +16,7 @@ function click(e) {
   context.fillRect(0, p_line_height/2, p_line_height, 1);
   var image = canvas.toDataURL()
 
-  set_url_configuration(p_line_height, p_offset, 'example.com');
+  set_url_configuration(p_line_height, p_offset, window.location.host);
 
   chrome.tabs.executeScript(null,
       {code:"document.body.style.backgroundImage='url("+ image  +")';document.body.style.backgroundPosition='0 " + p_offset + "px';"}); 
@@ -32,7 +32,7 @@ function set_url_configuration(spacing, offset, url) {
 }
 
 function load_url_configuration() {
-  chrome.storage.sync.get('example.com', function(site_configuration) {
+  chrome.storage.sync.get(window.location.host, function(site_configuration) {
     if (typeof site_configuration != 'undefined') {
       document.getElementById('spacing').value = site_configuration['spacing'];
       document.getElementById('offset').value = site_configuration['offset'];
